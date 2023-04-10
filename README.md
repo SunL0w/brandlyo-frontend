@@ -1,6 +1,6 @@
 # Front-end for brandly Saas
 
-Dependencies :
+## Dependencies :
 
 [Debian] :
 ```bash
