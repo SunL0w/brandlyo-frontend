@@ -2,7 +2,7 @@
 
 
 <p align="center">
-:new: Front-end for the Saas - Under heavy development :hourglass\_flowing\_sand:
+:new: Front-end for the Saas - Under heavy development :hourglass_flowing_sand:
 </p>
 
 \## Dependencies :
