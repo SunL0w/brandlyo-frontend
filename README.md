@@ -31,7 +31,7 @@ npm install
 
 ### `Start app`
 
-Then, to remove the OpenSSL error :
+To remove the OpenSSL error :
 
 ```bash
 export NODE_OPTIONS=--openssl-legacy-provider
