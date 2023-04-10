@@ -10,7 +10,7 @@
 \[**Debian**\] :
 
 ```plaintext
-sudo apt install nodejs npm -y
+sudo apt-get install nodejs npm -y
 ```
 
 \[**Fedora**\] :
