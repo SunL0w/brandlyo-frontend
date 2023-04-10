@@ -3,16 +3,23 @@
 Dependencies :
 
 [Debian] :
+```bash
 sudo apt install nodejs npm -y
+```
 
 [Fedora] :
+```bash
 sudo dnf install -y nodejs
-
+```
+```bash
 npm install antd axios react-redux redux redux-thunk react-router-dom react-intl antd@4 @ant-design/icons @ant-design/dark-theme less less-loader react-scripts@4
-
+```
+```bash
 npm install @craco/craco@6
-
+```
+```bash
 npm install craco-less less less-loader --legacy-peer-deps
+```
 
 ## Available Scripts
 
