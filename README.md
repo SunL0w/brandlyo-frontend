@@ -5,7 +5,7 @@
 :new: Front-end for the Saas - Under heavy development :hourglass_flowing_sand:
 </p>
 
-\## Dependencies :
+## Dependencies :
 
 \[**Debian**\] :
 
@@ -33,7 +33,7 @@ npm install craco-less less less-loader --legacy-peer-deps
 
 ---
 
-_**Full depependencies with versions :**_
+_**Full dependencies with versions :**_
 
 ```plaintext
 ├── @ant-design/dark-theme@2.0.2
