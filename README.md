@@ -29,13 +29,13 @@ In the project directory, you can run:
 npm install
 ```
 
-Then, To remove the OpenSSL error :
+### `Start app`
+
+Then, to remove the OpenSSL error :
 
 ```bash
 export NODE_OPTIONS=--openssl-legacy-provider
 ```
-
-### `Start app`
 
 ```bash
 npm start
