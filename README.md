@@ -9,33 +9,72 @@
 
 \[**Debian**\] :
 
-```plaintext
+```bash
 sudo apt-get install nodejs npm -y
 ```
 
 \[**Fedora**\] :
 
-```plaintext
+```bash
 sudo dnf install -y nodejs
 ```
 
-```plaintext
+```bash
 npm install antd axios react-redux redux redux-thunk react-router-dom react-intl antd@4 @ant-design/icons @ant-design/dark-theme less less-loader react-scripts@4
 ```
 
-```plaintext
+```bash
 npm install @craco/craco@6
 ```
 
-```plaintext
+```bash
 npm install craco-less less less-loader --legacy-peer-deps
 ```
+
+---
+
+_**Full depependencies with versions :**_
+
+```plaintext
+├── @ant-design/dark-theme@2.0.2
+├── @ant-design/icons@5.0.1
+├── @craco/craco@6.4.5
+├── @testing-library/jest-dom@5.16.5
+├── @testing-library/react@13.4.0
+├── @testing-library/user-event@13.5.0
+├── antd@4.24.8
+├── axios@1.3.5
+├── bindings@1.5.0
+├── craco-less@2.0.0
+├── file-uri-to-path@1.0.0
+├── less-loader@11.1.0
+├── less@4.1.3
+├── nan@2.17.0
+├── react-dom@18.2.0
+├── react-intl@6.3.2
+├── react-redux@8.0.5
+├── react-router-dom@6.10.0
+├── react-scripts@4.0.3
+├── react@18.2.0
+├── redux-thunk@2.4.2
+├── redux@4.2.1
+└── web-vitals@2.1.4
+```
+
+---
+
+You can list with :
+
+```bash
+npm list --depth=0
+```
+---
 
 ## Commands usage
 
 In the project directory, you can run:
 
-```plaintext
+```bash
 npm install
 ```
 
@@ -43,11 +82,11 @@ npm install
 
 To remove the OpenSSL error :
 
-```plaintext
+```bash
 export NODE_OPTIONS=--openssl-legacy-provider
 ```
 
-```plaintext
+```bash
 npm start
 ```
 
@@ -59,7 +98,7 @@ You may also see any lint errors in the console.
 
 ### `Launch the test`
 
-```plaintext
+```bash
 npm test
 ```
 
@@ -68,7 +107,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `Build app for production`
 
-```plaintext
+```bash
 npm run build
 ```
 
