@@ -46,12 +46,15 @@ body {
 
 .menu-item.bp4-button {
   background-color: #2F343C;
+  border: 1px solid #252A31;
 }
 .menu-item.bp4-button:hover {
   background-color: #3A3F47;
+  border-color: #33383F;
 }
 .menu-item.bp4-button:active {
   background-color: var(--primary-color);
+  border-color: #1C2127;
 }
 
 
@@ -61,6 +64,7 @@ body {
 
 .dashboard-button {
   background-color: var(--primary-color);
+  border-color: #2e96f8;
   color: var(--button-text-color);
   display: flex;
   align-items: center;
