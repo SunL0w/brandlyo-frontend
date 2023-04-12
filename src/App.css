@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* ... (styles globaux) ... */
+
+:root {
+  --primary-color: #1890ff;
+  --dark-grey-1: #1C2127;
+  --secondary-color: #2F343C;
+  --outline-color: #252A31;
+  --title-color: var(--primary-color);
+  --button-text-color: #FFFFFF;
+  --text-color: #ABB3BF;
+  --link-color: #0a95f7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--dark-grey-1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background-color: var(--secondary-color);
+  height: 46px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  /* Ajouter ici des styles pour le logo ici, si nécessaire */
+}
+
+.menu {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(206, 205, 205);
+  align-items: center;
 }
 
-.App-link {
-  color: #0a95f7;
+.menu-item {
+  color: var(--title-color);
+  margin-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-item.bp4-button {
+  background-color: #2F343C;
+}
+.menu-item.bp4-button:hover {
+  background-color: #3A3F47;
+}
+.menu-item.bp4-button:active {
+  background-color: var(--primary-color);
+}
+
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.dashboard-button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dashboard-button:hover {
+  /* Ajouter des styles pour le bouton dashboard au survol ici */
 }

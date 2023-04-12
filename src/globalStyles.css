@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #1890ff;
+    --dark-grey-1: #1C2127;
+    --secondary-color: #2F343C;
+    --outline-color: #252A31;
+    --title-color: var(--primary-color);
+    --button-text-color: #FFFFFF;
+    --text-color: #ABB3BF;
+    --link-color: #0a95f7;
+  }
+  
+  body {
+    background-color: var(--dark-grey-1);
+  }
+  
+  /* Ici, vous pouvez ajouter les styles pour les autres éléments (header, footer, etc.) */
+  
