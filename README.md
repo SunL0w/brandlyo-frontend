@@ -1,33 +1,32 @@
 ## Front-end for brandly Saas
 
+:new: Front-end for the Saas - Under heavy development :hourglass\_flowing\_sand:
 
-<p align="center">
-:new: Front-end for the Saas - Under heavy development :hourglass_flowing_sand:
-</p>
+PLEASE CHECK THE MVP, THIS BRANCH IS NOT MAINTENED : [https://github.com/SunL0w/brandly-frontend/tree/mvp](https://github.com/SunL0w/brandly-frontend/tree/mvp)
 
 ## Dependencies :
 
 \[**Debian**\] :
 
-```bash
+```plaintext
 sudo apt-get install nodejs npm -y
 ```
 
 \[**Fedora**\] :
 
-```bash
+```plaintext
 sudo dnf install -y nodejs
 ```
 
-```bash
+```plaintext
 npm install antd axios react-redux redux redux-thunk react-router-dom react-intl antd@4 @ant-design/icons @ant-design/dark-theme less less-loader react-scripts@4
 ```
 
-```bash
+```plaintext
 npm install @craco/craco@6
 ```
 
-```bash
+```plaintext
 npm install craco-less less less-loader --legacy-peer-deps
 ```
 
@@ -65,16 +64,17 @@ _**Full dependencies with versions :**_
 
 You can list with :
 
-```bash
+```plaintext
 npm list --depth=0
 ```
+
 ---
 
 ## Commands usage
 
 In the project directory, you can run:
 
-```bash
+```plaintext
 npm install
 ```
 
@@ -82,11 +82,11 @@ npm install
 
 To remove the OpenSSL error :
 
-```bash
+```plaintext
 export NODE_OPTIONS=--openssl-legacy-provider
 ```
 
-```bash
+```plaintext
 npm start
 ```
 
@@ -98,7 +98,7 @@ You may also see any lint errors in the console.
 
 ### `Launch the test`
 
-```bash
+```plaintext
 npm test
 ```
 
@@ -107,7 +107,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `Build app for production`
 
-```bash
+```plaintext
 npm run build
 ```
 
