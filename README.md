@@ -17,9 +17,16 @@ sudo apt-get install nodejs npm -y
 
 ```bash
 sudo dnf install -y nodejs
+```
+
+:heavy_exclamation_mark:
+React 18.2.0 is used, check your React version :
+```bash
+npm view react version
+```
 
 ## Dependencies:
-```
+
 _UI :_
 ```bash
 npm install --save @blueprintjs/core @blueprintjs/icons @blueprintjs/popover2 @blueprintjs/select 
