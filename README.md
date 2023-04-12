@@ -73,6 +73,7 @@ npm list --depth=0
 ## Commands usage
 
 _To install all dependencies required_
+
 In the project directory, you can run:
 
 ```bash
