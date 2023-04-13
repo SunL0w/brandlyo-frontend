@@ -5,8 +5,8 @@ import { IconNames } from '@blueprintjs/icons';
 const Header = ({ brandName }) => {
   return (
     <header className="header">
-      <div className="logo">
-        <img src="public/logo192.png" alt="Logo" />
+      <div className="logo" style={{ maxHeight: '100%', maxWidth: '5%' }}>
+        <img src="logo192.png" alt="Logo" />
       </div>
       <h1>{brandName}</h1>
       <nav className="menu">

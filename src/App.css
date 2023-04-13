@@ -27,8 +27,11 @@ body {
   box-sizing: border-box;
 }
 
-.logo {
-  /* Ajouter ici des styles pour le logo ici, si nécessaire */
+.logo img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
 .menu {
