@@ -1,8 +1,8 @@
-## MVP Front-end for brandly Saas
+## MVP - Front-end for brandly Saas
 
 
 <p align="center">
-:new: Front-end legacy for the Saas - Under heavy development :hourglass_flowing_sand:
+:new: Front-end MVP for the Saas - Under heavy development :hourglass_flowing_sand:
 </p>
 
 ## Install dev environment :
