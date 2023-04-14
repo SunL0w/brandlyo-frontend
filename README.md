@@ -3,8 +3,9 @@
 
 <p align="center">
 :new: Front-end MVP for the Saas - Under heavy development :hourglass_flowing_sand:
-PLEASE CHECK THE :arrow_right: [MVP](https://github.com/SunL0w/brandly-frontend/tree/mvp) :arrow_left: BRANCH, THIS BRANCH IS THE STABLE VERSION
 </p>
+
+PLEASE CHECK THE :arrow_right: [MVP](https://github.com/SunL0w/brandly-frontend/tree/mvp) :arrow_left: BRANCH, THIS BRANCH IS THE STABLE VERSION
 
 ## Install dev environment :
 
