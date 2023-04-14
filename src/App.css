@@ -48,8 +48,8 @@ body {
 }
 
 .menu-item.bp4-button {
-  background-color: #2F343C;
-  border: 1px solid #252A31;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--outline-color);
 }
 .menu-item.bp4-button:hover {
   background-color: #3A3F47;
@@ -60,14 +60,13 @@ body {
   border-color: #1C2127;
 }
 
-
 .menu-item:last-child {
   margin-right: 0;
 }
 
 .dashboard-button {
   background-color: var(--primary-color);
-  border-color: #2e96f8;
+  border-color: var(--primary-color);
   color: var(--button-text-color);
   display: flex;
   align-items: center;
@@ -77,6 +76,99 @@ body {
   text-decoration: none;
 }
 
-.dashboard-button:hover {
+/*.dashboard-button:hover {*/
   /* Ajouter des styles pour le bouton dashboard au survol ici */
+/*}*/
+
+.language-selector-dialog .bp4-dialog-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
 }
+
+.bp4-dialog-body {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.language-selector-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.language-selector-content .bp4-menu-item > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.language-selector-content .bp4-menu-item .bp4-icon {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.language-selector-content .bp4-menu-item::before {
+  display: none;
+  content: none;
+}
+
+.language-flag {
+  width: 200px;
+  height: auto;
+}
+
+.language-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.language-text {
+  color: var(--primary-color);
+}
+
+.bp4-dialog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .language-selector-dialog-text {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  .language-selector-dialog-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .language-selector-dialog-flags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
