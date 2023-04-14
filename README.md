@@ -1,11 +1,12 @@
-## Front-end for brandly Saas
+## MVP - Front-end for brandly Saas
 
 
 <p align="center">
-:new: Front-end for the Saas - Under heavy development :hourglass_flowing_sand:
+:new: Front-end MVP for the Saas - Under heavy development :hourglass_flowing_sand:
+PLEASE CHECK THE :arrow_right: [MVP](https://github.com/SunL0w/brandly-frontend/tree/mvp) :arrow_left: BRANCH, THIS BRANCH IS THE STABLE VERSION
 </p>
 
-## Dependencies :
+## Install dev environment :
 
 \[**Debian**\] :
 
@@ -19,16 +20,22 @@ sudo apt-get install nodejs npm -y
 sudo dnf install -y nodejs
 ```
 
+:heavy_exclamation_mark:
+React 18.2.0 is used, check your React version :
 ```bash
-npm install antd axios react-redux redux redux-thunk react-router-dom react-intl antd@4 @ant-design/icons @ant-design/dark-theme less less-loader react-scripts@4
+npm view react version
 ```
 
+## Dependencies:
+
+_UI :_
 ```bash
-npm install @craco/craco@6
+npm install --save @blueprintjs/core @blueprintjs/icons @blueprintjs/popover2 @blueprintjs/select 
 ```
 
+_Core :_
 ```bash
-npm install craco-less less less-loader --legacy-peer-deps
+npm install --save react-redux redux redux-thunk react-router-dom react-intl axios
 ```
 
 ---
@@ -36,25 +43,19 @@ npm install craco-less less less-loader --legacy-peer-deps
 _**Full dependencies with versions :**_
 
 ```plaintext
-├── @ant-design/dark-theme@2.0.2
-├── @ant-design/icons@5.0.1
-├── @craco/craco@6.4.5
+├── @blueprintjs/core@4.17.8
+├── @blueprintjs/icons@4.14.5
+├── @blueprintjs/popover2@1.13.12
+├── @blueprintjs/select@4.9.12
 ├── @testing-library/jest-dom@5.16.5
 ├── @testing-library/react@13.4.0
 ├── @testing-library/user-event@13.5.0
-├── antd@4.24.8
 ├── axios@1.3.5
-├── bindings@1.5.0
-├── craco-less@2.0.0
-├── file-uri-to-path@1.0.0
-├── less-loader@11.1.0
-├── less@4.1.3
-├── nan@2.17.0
 ├── react-dom@18.2.0
 ├── react-intl@6.3.2
 ├── react-redux@8.0.5
 ├── react-router-dom@6.10.0
-├── react-scripts@4.0.3
+├── react-scripts@5.0.1
 ├── react@18.2.0
 ├── redux-thunk@2.4.2
 ├── redux@4.2.1
@@ -72,19 +73,15 @@ npm list --depth=0
 
 ## Commands usage
 
+_To install all dependencies required_
+
 In the project directory, you can run:
 
 ```bash
 npm install
 ```
 
-### `Start app`
-
-To remove the OpenSSL error :
-
-```bash
-export NODE_OPTIONS=--openssl-legacy-provider
-```
+### `Start app in dev mode`
 
 ```bash
 npm start
