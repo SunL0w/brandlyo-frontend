@@ -5,7 +5,7 @@ import Header from './components/Header';
 import LanguageSelector from './components/LanguageSelector';
 //import './globalStyles.css';
 
-const brandName = "Brandly";
+const brandName = "Brandlyo";
 
 function App() {
   return (
