@@ -9,7 +9,9 @@
   --outline-color: #252A31;
   --title-color: var(--primary-color);
   --button-text-color: #FFFFFF;
+  --button-hover-color: #40a0fa;
   --text-color: #ABB3BF;
+  --input-field-bg: #2B2A2A;
   --link-color: #0a95f7;
 }
 
@@ -49,15 +51,15 @@ body {
 
 .menu-item.bp4-button {
   background-color: var(--secondary-color);
-  border: 1px solid var(--outline-color);
+  border: 0px solid var(--outline-color);
 }
 .menu-item.bp4-button:hover {
-  background-color: #3A3F47;
-  border-color: #33383F;
+  color: var(--button-hover-color);
+  border: none;
 }
 .menu-item.bp4-button:active {
-  background-color: var(--primary-color);
-  border-color: #1C2127;
+  background-color: var(--button-hover-color);
+  border: none;
 }
 
 .menu-item:last-child {
@@ -70,15 +72,17 @@ body {
   color: var(--button-text-color);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 5px 10px;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
 }
 
-/*.dashboard-button:hover {*/
-  /* Ajouter des styles pour le bouton dashboard au survol ici */
-/*}*/
+.dashboard-button:hover {
+  background-color: var(--button-hover-color);
+}
 
 .language-selector-dialog .bp4-dialog-body {
   display: flex;
@@ -194,6 +198,8 @@ body {
   box-sizing: border-box;
   border: 2px solid var(--primary-color);
   border-radius: 4px;
+  background-color: var(--input-field-bg);
+  color: var(--text-color);
 }
 
 .next-button {
@@ -211,5 +217,5 @@ body {
 }
 
 .next-button:hover {
-  background-color: var(--primary-color-hover);
+  background-color: var(--button-hover-color);
 }
