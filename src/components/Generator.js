@@ -96,6 +96,30 @@ function Generator() {
     }
   };  
 
+  // Liste des choix du style
+  const styleChoices = [
+    "Vintage",
+    "Artisanal",
+    "Contemporain",
+    "Moderne classique",
+    "Minimaliste japonais",
+    "Shabby chic",
+    "Bohème",
+    "Country chic",
+    "Mid-century moderne",
+    "Hollywood regency",
+    "Glamour",
+    "Rétro-futuriste",
+    "Cyberpunk",
+    "Steampunk",
+    "Punk rock",
+    "Gothique",
+    "Hipster",
+    "Skater",
+    "Surfer",
+    "Urbain",
+  ];
+
   // Liste des choix de créativité
   const creativityChoices = [
     "Innovateur",
@@ -197,52 +221,31 @@ function Generator() {
               </button>
             </div>
           );
-          case 3:
-            const choices = [
-              "Vintage",
-              "Artisanal",
-              "Contemporain",
-              "Moderne classique",
-              "Minimaliste japonais",
-              "Shabby chic",
-              "Bohème",
-              "Country chic",
-              "Mid-century moderne",
-              "Hollywood regency",
-              "Glamour",
-              "Rétro-futuriste",
-              "Cyberpunk",
-              "Steampunk",
-              "Punk rock",
-              "Gothique",
-              "Hipster",
-              "Skater",
-              "Surfer",
-              "Urbain",
-            ];
-          
-            return (
-              <div className="dialog-box">
-                <div className="choices-container">
-                  {choices.map((choice, index) => (
-                    <label key={index} className="choice">
-                      <input
-                        type="checkbox"
-                        checked={selectedChoices.includes(choice)}
-                        onChange={() => handleChoiceChange(choice)}
-                      />
-                      {choice}
-                    </label>
-                  ))}
-                </div>
-                <button
-                  className={`next-button${selectedChoices.length === 0 ? " error" : ""}`}
-                  onClick={handleNext}
-                >
-                  Next
-                </button>
+        case 3:
+          return (
+            <div className="dialog-box">
+              <h3>Choose style</h3>
+              <div className="choices-container">
+                {styleChoices.map((choice) => (
+                  <div key={choice} className="choice">
+                    <input
+                      type="checkbox"
+                      id={choice}
+                      checked={selectedChoices.includes(choice)}
+                      onChange={() => handleChoiceChange(choice)}
+                    />
+                    <label htmlFor={choice}>{choice}</label>
+                  </div>
+                ))}
               </div>
-            );  
+              <button
+                className={`next-button${selectedChoices.length === 0 ? " error" : ""}`}
+                onClick={handleNext}
+              >
+                Next
+              </button>
+            </div>
+          );
             case 4:
               return (
                 <div className="dialog-box">
