@@ -291,7 +291,13 @@ body {
   background-color: var(--primary-color);
 }
 
+.summary-text {
+  color: var(--text-color);
+}
 
+.summary-variable {
+  color: var(--primary-color);
+}
 
 .next-button {
   background-color: var(--primary-color);

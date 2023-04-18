@@ -408,30 +408,30 @@ function Generator() {
                   );                                                           
       // Les autres boîtes de dialogue si il y des étapes à ajouter
       case 7:
-        return (
-          <div className="dialog-box">
-            <h3 className="dialog-box-title">Summary of choices</h3>
-            <ul>
-              <li>Brand keywords (activity sectors): {brandKeyword}</li>
-              <li>Business description: {brandDescription}</li>
-              <li>
-                Maximum and minimum length of the company name: <br />
-                MIN: {brandMinLength} <br />
-                MAX: {brandMaxLength}
-              </li>
-              <li>Number of syllables in the name: {brandNbrSyllables}</li>
-              <li>Words you want to include in name: {brandWords}</li>
-              <li>Language: {brandLanguage}</li>
-              <li>Styles: {brandStyle.join(", ")}</li>
-              <li>Creativity Filters: {brandCreativity}</li>
-              <li>Personalities: {brandPersonalitie}</li>
-              <li>Epochs: {brandEpoch}</li>
-            </ul>
-            <button className="next-button" onClick={handleGenerate}>
-              Generate
-            </button>
-          </div>
-        );      
+  return (
+    <div className="dialog-box">
+      <h3 className="dialog-box-title">Summary of choices</h3>
+      <ul>
+        <li><span className="summary-text">Brand keywords (activity sectors): </span><span className="summary-variable">{brandKeyword}</span></li>
+        <li><span className="summary-text">Business description: </span><span className="summary-variable">{brandDescription}</span></li>
+        <li>
+          <span className="summary-text">Maximum and minimum length of the company name: </span><br />
+          <span className="summary-text">MIN: </span><span className="summary-variable">{brandMinLength}</span> <br />
+          <span className="summary-text">MAX: </span><span className="summary-variable">{brandMaxLength}</span>
+        </li>
+        <li><span className="summary-text">Number of syllables in the name: </span><span className="summary-variable">{brandNbrSyllables}</span></li>
+        <li><span className="summary-text">Words you want to include in name: </span><span className="summary-variable">{brandWords}</span></li>
+        <li><span className="summary-text">Language: </span><span className="summary-variable">{brandLanguage}</span></li>
+        <li><span className="summary-text">Styles: </span><span className="summary-variable">{brandStyle.join(", ")}</span></li>
+        <li><span className="summary-text">Creativity Filters: </span><span className="summary-variable">{brandCreativity}</span></li>
+        <li><span className="summary-text">Personalities: </span><span className="summary-variable">{brandPersonalitie}</span></li>
+        <li><span className="summary-text">Epochs: </span><span className="summary-variable">{brandEpoch}</span></li>
+      </ul>
+      <button className="next-button" onClick={handleGenerate}>
+        Generate
+      </button>
+    </div>
+  );  
       default:
         return null;
     }
