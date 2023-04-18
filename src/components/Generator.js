@@ -310,7 +310,8 @@ function Generator() {
                 {styleChoices.map((choice) => (
                   <div key={choice} className="choice">
                     <input
-                      type="checkbox"
+                      type="radio"
+                      name="style"
                       id={choice}
                       checked={selectedChoices.includes(choice)}
                       onChange={() => handleChoiceChange(choice)}
@@ -335,7 +336,8 @@ function Generator() {
                     {creativityChoices.map((choice) => (
                       <div key={choice} className="choice">
                         <input
-                          type="checkbox"
+                          type="radio"
+                          name="creativity"
                           id={choice}
                           checked={selectedCreativity === choice}
                           onChange={() => setSelectedCreativity(choice)}
