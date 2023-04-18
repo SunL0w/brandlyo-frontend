@@ -1,18 +1,23 @@
-//import logo from './logo.svg';
-import './App.css';
 import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import LanguageSelector from './components/LanguageSelector';
-//import './globalStyles.css';
+import Generator from './components/Generator';
 
 const brandName = "Brandlyo";
 
 function App() {
   return (
     <div>
-      <Header brandName={brandName} />
-      <LanguageSelector />
-      {/* Ici, ajouter le contenu de la page et le footer */}
+      <Router>
+        <Header brandName={brandName} />
+        <Routes>
+          <Route path="/" element={<LanguageSelector />} />
+          <Route path="/generator" element={<Generator />} />
+        </Routes>
+        {/* Ici, le contenu de la page et le footer */}
+      </Router>
     </div>
   );
 }
