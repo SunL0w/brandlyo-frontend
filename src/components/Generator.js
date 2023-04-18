@@ -13,6 +13,8 @@ function Generator() {
   const [brandLanguage, setBrandLanguage] = useState("English");
   const [selectedChoices, setSelectedChoices] = useState([]);
   const [brandStyle, setBrandStyle] = useState([]);
+  const [brandCreativity, setBrandCreativity] = useState("");
+  const [selectedCreativity, setSelectedCreativity] = useState("");
   // autres états
 
   // États pour gérer l'affichage des boîtes de dialogue
@@ -44,6 +46,18 @@ function Generator() {
         // enregistrer les paramètres dans Redux
         setStep(step + 1);
       }
+    } else if (step === 4) {
+      if (!selectedCreativity) {
+        // mettre le fond du bouton en rouge si aucun choix n'est sélectionné
+        setHasError(true);
+      } else {
+        // L'utilisateur a bien entré quelque chose, pas d'erreur
+        setHasError(false);
+        // Mettre à jour brand_creativity avec le choix sélectionné
+        setBrandCreativity(selectedCreativity);
+        // enregistrer les paramètres dans Redux
+        setStep(step + 1);
+      }
     } else {
       // enregistrer les paramètres dans Redux
       setStep(step + 1);
@@ -64,6 +78,7 @@ function Generator() {
         brandWords,
         brandLanguage,
         brandStyle,
+        brandCreativity,
         // autres paramètres
       });
   // Traitez la réponse et affichez les résultats
@@ -80,6 +95,30 @@ function Generator() {
       setSelectedChoices([...selectedChoices, choice]);
     }
   };  
+
+  // Liste des choix de créativité
+  const creativityChoices = [
+    "Innovateur",
+    "Révolutionnaire",
+    "Visionnaire",
+    "Ingénieux",
+    "Inspiré",
+    "Créatif",
+    "Intuitif",
+    "Fantaisiste",
+    "Original",
+    "Unique",
+    "Surprenant",
+    "Nouveau",
+    "Progressif",
+    "Novateur",
+    "Pionnier",
+    "Évolutif",
+    "Progressiste",
+    "Nouvelle vague",
+    "Disruptif",
+    "Audacieux",
+  ];  
 
   const renderStep = (currentStep) => {
     switch (currentStep) {
@@ -203,8 +242,33 @@ function Generator() {
                   Next
                 </button>
               </div>
-            );                  
-      // case 3, 4, etc. pour les autres boîtes de dialogue
+            );  
+            case 4:
+              return (
+                <div className="dialog-box">
+                  <h3>Choose creativity filter</h3>
+                  <div className="choices-container">
+                    {creativityChoices.map((choice) => (
+                      <div key={choice} className="choice">
+                        <input
+                          type="checkbox"
+                          id={choice}
+                          checked={selectedCreativity === choice}
+                          onChange={() => setSelectedCreativity(choice)}
+                        />
+                        <label htmlFor={choice}>{choice}</label>
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    className={`next-button${hasError ? " error" : ""}`}
+                    onClick={handleNext}
+                  >
+                    Next
+                  </button>
+                </div>
+              );                            
+      // case 5, etc. pour les autres boîtes de dialogue
       case 6:
         return (
           <div className="dialog-box">
