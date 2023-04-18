@@ -15,7 +15,8 @@ function Generator() {
   const [brandStyle, setBrandStyle] = useState([]);
   const [brandCreativity, setBrandCreativity] = useState("");
   const [selectedCreativity, setSelectedCreativity] = useState("");
-  // autres états
+  const [brandPersonalitie, setBrandPersonalitie] = useState("None");
+  const [brandEpoch, setBrandEpoch] = useState("None");
 
   // États pour gérer l'affichage des boîtes de dialogue
   const [step, setStep] = useState(1);
@@ -62,8 +63,7 @@ function Generator() {
       // enregistrer les paramètres dans Redux
       setStep(step + 1);
     }
-  };
-  
+  };  
 
   // Gestionnaire d'événements pour le bouton "Generate"
   const handleGenerate = async () => {
@@ -79,6 +79,7 @@ function Generator() {
         brandLanguage,
         brandStyle,
         brandCreativity,
+        brandPersonalitie,
         // autres paramètres
       });
   // Traitez la réponse et affichez les résultats
@@ -143,6 +144,86 @@ function Generator() {
     "Disruptif",
     "Audacieux",
   ];  
+
+  // Liste des personnalités
+  const personalityChoices = [
+    "None",
+    "Albert Einstein",
+    "Marie Curie",
+    "Salvador Dalí",
+    "Frida Kahlo",
+    "Walt Disney",
+    "Bill Gates",
+    "Oprah Winfrey",
+    "Warren Buffett",
+    "J.K. Rowling",
+    "Mark Zuckerberg",
+    "Tim Cook",
+    "Jeff Bezos",
+    "Richard Branson",
+    "Elon Musk",
+    "Barack Obama",
+    "Malala Yousafzai",
+    "Nelson Mandela",
+    "Winston Churchill",
+    "Mother Teresa",
+    "Mahatma Gandhi",
+    "Charlie Chaplin",
+    "Louis de Funès",
+    "Jerry Lewis",
+    "Buster Keaton",
+    "Jacques Tati",
+    "Jim Carrey",
+    "Eddie Murphy",
+    "Robin Williams",
+    "Will Ferrell",
+    "Tina Fey",
+    "Harry Potter",
+    "Frodon Sacquet",
+    "Katniss Everdeen",
+    "Luke Skywalker",
+    "Sherlock Holmes",
+    "James Bond",
+    "Lara Croft",
+    "Indiana Jones",
+    "Tony Stark (Iron Man)",
+    "Wonder Woman",
+    "Dark Vador (Star Wars)",
+    "Gandalf (Le Seigneur des Anneaux)",
+    "Dumbledore (Harry Potter)",
+    "Yoda (Star Wars)",
+    "Aragorn (Le Seigneur des Anneaux)",
+    "Hermione Granger (Harry Potter)",
+    "Obi-Wan Kenobi (Star Wars)",
+    "Legolas (Le Seigneur des Anneaux)",
+    "Ron Weasley (Harry Potter)",
+    "Han Solo (Star Wars)",
+  ];
+
+  // Liste des époques
+  const epochChoices = [
+    "None",
+    "Antique",
+    "Médiévale",
+    "Baroque tardif",
+    "Rococo",
+    "Néo-classique",
+    "Art nouveau",
+    "Art déco",
+    "Pop art",
+    "Postmodernisme",
+    "Art contemporain",
+    "Années 50",
+    "Années 60",
+    "Années 70",
+    "Années 80",
+    "Années 90",
+    "Années 2000",
+    "Années 2010",
+    "Années 2020",
+    "Post-apocalyptique",
+    "Science-fiction"
+  ];
 
   const renderStep = (currentStep) => {
     switch (currentStep) {
@@ -270,17 +351,82 @@ function Generator() {
                     Next
                   </button>
                 </div>
-              );                            
-      // case 5, etc. pour les autres boîtes de dialogue
-      case 6:
+              ); 
+              case 5:
+                return (
+                  <div className="dialog-box">
+                    <h3>Choose a personalitie</h3>
+                    <div className="choices-container">
+                      {personalityChoices.map((choice) => (
+                        <div key={choice} className="choice">
+                          <input
+                            type="radio" 
+                            name="personalitie" // Add a name attribute
+                            id={choice}
+                            checked={brandPersonalitie === choice}
+                            onChange={() => setBrandPersonalitie(choice)}
+                          />
+                          <label htmlFor={choice}>{choice}</label>
+                        </div>
+                      ))}
+                    </div>
+                    <button
+                      className="next-button"
+                      onClick={handleNext}
+                    >
+                      Next
+                    </button>
+                  </div>
+                );
+                case 6:
+                  return (
+                    <div className="dialog-box">
+                      <h3>Choose the epoch</h3>
+                      <div className="choices-container">
+                        {epochChoices.map((choice) => (
+                          <div key={choice} className="choice">
+                            <input
+                              type="radio"
+                              name="epoch"
+                              id={choice}
+                              checked={brandEpoch === choice}
+                              onChange={() => setBrandEpoch(choice)}
+                            />
+                            <label htmlFor={choice}>{choice}</label>
+                          </div>
+                        ))}
+                      </div>
+                      <button className="next-button" onClick={handleNext}>
+                        Next
+                      </button>
+                    </div>
+                  );                                                           
+      // Les autres boîtes de dialogue si il y des étapes à ajouter
+      case 7:
         return (
           <div className="dialog-box">
-            {/* Résumé des choix */}
+            <h3>Summary of choices</h3>
+            <ul>
+              <li>Brand keywords (activity sectors): {brandKeyword}</li>
+              <li>Business description: {brandDescription}</li>
+              <li>
+                Maximum and minimum length of the company name: <br />
+                MIN: {brandMinLength} <br />
+                MAX: {brandMaxLength}
+              </li>
+              <li>Number of syllables in the name: {brandNbrSyllables}</li>
+              <li>Words you want to include in name: {brandWords}</li>
+              <li>Language: {brandLanguage}</li>
+              <li>Styles: {brandStyle.join(", ")}</li>
+              <li>Creativity Filters: {brandCreativity}</li>
+              <li>Personalities: {brandPersonalitie}</li>
+              <li>Epochs: {brandEpoch}</li>
+            </ul>
             <button className="next-button" onClick={handleGenerate}>
               Generate
             </button>
           </div>
-        );
+        );      
       default:
         return null;
     }
