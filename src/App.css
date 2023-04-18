@@ -196,6 +196,14 @@ body {
   overflow-y: auto;
 }
 
+.dialog-box-title {
+  text-align: center;
+  color: var(--title-color);
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+
 .input-field {
   width: 100%;
   padding: 12px 20px;

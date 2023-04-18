@@ -308,7 +308,7 @@ function Generator() {
         case 3:
           return (
             <div className="dialog-box">
-              <h3>Choose style</h3>
+              <h3 className="dialog-box-title">Choose style</h3>
               <div className="choices-container">
                 {styleChoices.map((choice) => (
                   <div key={choice} className="choice">
@@ -334,7 +334,7 @@ function Generator() {
             case 4:
               return (
                 <div className="dialog-box">
-                  <h3>Choose creativity filter</h3>
+                  <h3 className="dialog-box-title">Choose creativity filter</h3>
                   <div className="choices-container">
                     {creativityChoices.map((choice) => (
                       <div key={choice} className="choice">
@@ -360,7 +360,7 @@ function Generator() {
               case 5:
                 return (
                   <div className="dialog-box">
-                    <h3>Choose a personalitie</h3>
+                    <h3 className="dialog-box-title">Choose a personalitie</h3>
                     <div className="choices-container">
                       {personalityChoices.map((choice) => (
                         <div key={choice} className="choice">
@@ -386,7 +386,7 @@ function Generator() {
                 case 6:
                   return (
                     <div className="dialog-box">
-                      <h3>Choose the epoch</h3>
+                     <h3 className="dialog-box-title">Choose the epoch</h3>
                       <div className="choices-container">
                         {epochChoices.map((choice) => (
                           <div key={choice} className="choice">
@@ -410,7 +410,7 @@ function Generator() {
       case 7:
         return (
           <div className="dialog-box">
-            <h3>Summary of choices</h3>
+            <h3 className="dialog-box-title">Summary of choices</h3>
             <ul>
               <li>Brand keywords (activity sectors): {brandKeyword}</li>
               <li>Business description: {brandDescription}</li>
