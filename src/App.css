@@ -12,6 +12,7 @@
   --button-hover-color: #40a0fa;
   --text-color: #ABB3BF;
   --input-field-bg: #2B2A2A;
+  --radio-button-bg: var(--input-field-bg);
   --link-color: #0a95f7;
   --warning-color: #f70a0a;
 }
@@ -190,7 +191,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   min-height: 100px;
   max-height: calc(100% - 90px);
   overflow-y: auto;
@@ -229,6 +230,68 @@ body {
   width: calc(33.3333% - 10px);
   margin-bottom: 10px;
 }
+
+/* Masquer l'input radio d'origine */
+.choice input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style pour les boutons radio non sélectionnés */
+.choice input[type="radio"] + label {
+  display: inline-block;
+  padding: 5px 10px;
+  padding-left: 30px; /* Ajouter un espace à gauche pour le rond */
+  border: 2px solid var(--text-color);
+  border-radius: 4px;
+  background-color: var(--radio-button-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+/* Créer un rond personnalisé avec le pseudo-élément ::before */
+.choice input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+  background-color: var(--input-field-bg);
+}
+
+/* Style pour les boutons radio sélectionnés */
+.choice input[type="radio"]:checked + label {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Modifier la couleur de la bordure du rond personnalisé lorsqu'il est sélectionné */
+.choice input[type="radio"]:checked + label::before {
+  border-color: var(--primary-color);
+}
+
+/* Ajouter un cercle rempli à l'intérieur du rond personnalisé lorsqu'il est sélectionné */
+.choice input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+
 
 .next-button {
   background-color: var(--primary-color);
