@@ -87,6 +87,19 @@ body {
   background-color: var(--button-hover-color);
 }
 
+.main-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2rem; /* Ajustez la taille du texte en fonction de vos préférences */
+  margin-bottom: 3rem; /* Ajoutez une marge en dessous du titre pour l'espacement */
+}
+
 .language-selector-dialog .bp4-dialog-body {
   display: flex;
   justify-content: center;

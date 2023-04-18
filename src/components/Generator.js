@@ -232,26 +232,29 @@ function Generator() {
     switch (currentStep) {
       case 1:
         return (
-          <div className="dialog-box">
-            <input
-              className={`input-field${hasError ? " error" : ""}`}
-              type="text"
-              placeholder="Brand keywords (with comma)"
-              value={brandKeyword}
-              onChange={(e) => setBrandKeyword(e.target.value)}
-            />
-            <input
-              className="input-field"
-              type="text"
-              placeholder="Business description (optional)"
-              value={brandDescription}
-              onChange={(e) => setBrandDescription(e.target.value)}
-            />
-            <button className="next-button" onClick={handleNext}>
-              Next
-            </button>
+          <div className="main-title-container">
+            <h1 className="main-title">Powerful Business Name Generator</h1>
+            <div className="dialog-box">
+              <input
+                className={`input-field${hasError ? " error" : ""}`}
+                type="text"
+                placeholder="Brand keywords (with comma)"
+                value={brandKeyword}
+                onChange={(e) => setBrandKeyword(e.target.value)}
+              />
+              <input
+                className="input-field"
+                type="text"
+                placeholder="Business description (optional)"
+                value={brandDescription}
+                onChange={(e) => setBrandDescription(e.target.value)}
+              />
+              <button className="next-button" onClick={handleNext}>
+                Next
+              </button>
+            </div>
           </div>
-        );
+        );      
         case 2:
           return (
             <div className="dialog-box">
