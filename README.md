@@ -1,4 +1,4 @@
-## MVP - Front-end for brandly Saas
+## MVP - Front-end for brandlyo Saas
 
 
 <p align="center">
