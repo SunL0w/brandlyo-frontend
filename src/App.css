@@ -21,6 +21,7 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,6 +191,9 @@ body {
   padding: 20px;
   width: 100%;
   max-width: 500px;
+  min-height: 100px;
+  max-height: calc(100% - 90px);
+  overflow-y: auto;
 }
 
 .input-field {

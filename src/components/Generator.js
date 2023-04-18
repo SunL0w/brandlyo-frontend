@@ -71,7 +71,7 @@ function Generator() {
   // Gestionnaire d'événements pour le bouton "Generate"
   const handleGenerate = async () => {
     try {
-      // Envoyez les données au back-end et gérez la réponse
+      // Envoyez les données au back-end et gérer la réponse
       const response = await axios.post("https://the-backend-api.com/generate", {
         brandKeyword,
         brandDescription,
@@ -91,7 +91,7 @@ function Generator() {
     }
   };
 
-  // Gestion des choix de l'utilisateur pour les checkbox
+  // Gestion des choix de l'utilisateur
   const handleChoiceChange = (choice) => {
     if (selectedChoices.includes(choice)) {
       setSelectedChoices(selectedChoices.filter((item) => item !== choice));
