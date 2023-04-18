@@ -11,9 +11,20 @@ function Generator() {
   // États pour gérer l'affichage des boîtes de dialogue
   const [step, setStep] = useState(1);
 
+  // Gestion du statut des erreurs
+  const [hasError, setHasError] = useState(false);
+
   // Gestionnaires d'événements pour les boutons "Next"
   const handleNext = () => {
-    setStep(step + 1);
+    if (!brandKeyword) {
+      // mettre le tour du champ en rouge si rien n'est entré
+      setHasError(true);
+    } else {
+      // L'utilisateur à bien entré quelque-chose dans le champ, pas d'erreur
+      setHasError(false);
+      // enregistrer les paramètres dans Redux
+      setStep(step + 1);
+    }
   };
 
   // Gestionnaire d'événements pour le bouton "Generate"
@@ -37,7 +48,7 @@ function Generator() {
         return (
           <div className="dialog-box">
             <input
-              className="input-field"
+              className={`input-field${hasError ? " error" : ""}`}
               type="text"
               placeholder="Brand keywords (with comma)"
               value={brandKeyword}

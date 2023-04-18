@@ -13,6 +13,7 @@
   --text-color: #ABB3BF;
   --input-field-bg: #2B2A2A;
   --link-color: #0a95f7;
+  --warning-color: #f70a0a;
 }
 
 body {
@@ -201,6 +202,11 @@ body {
   background-color: var(--input-field-bg);
   color: var(--text-color);
 }
+
+.input-field.error {
+  border-color:var(--warning-color);
+}
+
 
 .next-button {
   background-color: var(--primary-color);
