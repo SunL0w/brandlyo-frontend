@@ -9,7 +9,7 @@ function Generator() {
   const [brandMaxLength, setBrandMaxLength] = useState(8);
   const [brandMinLength, setBrandMinLength] = useState(7);
   const [brandNbrSyllables, setBrandNbrSyllables] = useState(2);
-  const [brandWords, setBrandWords] = useState("");
+  const [brandWords, setBrandWords] = useState("None");
   const [brandLanguage, setBrandLanguage] = useState("English");
   const [selectedChoices, setSelectedChoices] = useState([]);
   const [brandStyle, setBrandStyle] = useState([]);
@@ -32,6 +32,9 @@ function Generator() {
       } else {
         // L'utilisateur à bien entré quelque-chose dans le champ, pas d'erreur
         setHasError(false);
+        if (brandDescription === "") {
+          setBrandDescription("None");
+        }
         // enregistrer les paramètres dans Redux
         setStep(step + 1);
       }
