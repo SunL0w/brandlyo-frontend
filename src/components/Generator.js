@@ -83,6 +83,7 @@ function Generator() {
         brandStyle,
         brandCreativity,
         brandPersonalitie,
+        brandEpoch,
         // autres paramètres
       });
   // Traitez la réponse et affichez les résultats
