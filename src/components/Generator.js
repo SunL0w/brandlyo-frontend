@@ -257,58 +257,58 @@ function Generator() {
           </div>
         );      
         case 2:
-          return (
-            <div className="dialog-box">
-              <label>
-                Enter maximum length of the company name:
-                <input
-                  className="input-field"
-                  type="number"
-                  value={brandMaxLength}
-                  onChange={(e) => setBrandMaxLength(e.target.value)}
-                />
-              </label>
-              <label>
-                Enter minimum length of the company name:
-                <input
-                  className="input-field"
-                  type="number"
-                  value={brandMinLength}
-                  onChange={(e) => setBrandMinLength(e.target.value)}
-                />
-              </label>
-              <label>
-                Enter number of syllables in the name:
-                <input
-                  className="input-field"
-                  type="number"
-                  value={brandNbrSyllables}
-                  onChange={(e) => setBrandNbrSyllables(e.target.value)}
-                />
-              </label>
-              <label>
-                Enter type of words you want to include (e.g. nouns, adjectives, verbs, etc):
-                <input
-                  className="input-field"
-                  type="text"
-                  value={brandWords}
-                  onChange={(e) => setBrandWords(e.target.value)}
-                />
-              </label>
-              <label>
-                Enter language in which you want to generate the name:
-                <input
-                  className="input-field"
-                  type="text"
-                  value={brandLanguage}
-                  onChange={(e) => setBrandLanguage(e.target.value)}
-                />
-              </label>
-              <button className="next-button" onClick={handleNext}>
-                Next
-              </button>
-            </div>
-          );
+        return (
+          <div className="dialog-box">
+            <label className="general-text">
+              Enter maximum length of the company name:
+              <input
+                className="input-field"
+                type="number"
+                value={brandMaxLength}
+                onChange={(e) => setBrandMaxLength(e.target.value)}
+              />
+            </label>
+            <label className="general-text">
+              Enter minimum length of the company name:
+              <input
+                className="input-field"
+                type="number"
+                value={brandMinLength}
+                onChange={(e) => setBrandMinLength(e.target.value)}
+              />
+            </label>
+            <label className="general-text">
+              Enter number of syllables in the name:
+              <input
+                className="input-field"
+                type="number"
+                value={brandNbrSyllables}
+                onChange={(e) => setBrandNbrSyllables(e.target.value)}
+              />
+            </label>
+            <label className="general-text">
+              Enter type of words you want to include (e.g. nouns, adjectives, verbs, etc):
+              <input
+                className="input-field"
+                type="text"
+                value={brandWords}
+                onChange={(e) => setBrandWords(e.target.value)}
+              />
+            </label>
+            <label className="general-text">
+              Enter language in which you want to generate the name:
+              <input
+                className="input-field"
+                type="text"
+                value={brandLanguage}
+                onChange={(e) => setBrandLanguage(e.target.value)}
+              />
+            </label>
+            <button className="next-button" onClick={handleNext}>
+              Next
+            </button>
+          </div>
+        );
         case 3:
           return (
             <div className="dialog-box">

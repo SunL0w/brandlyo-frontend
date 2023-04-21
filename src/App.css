@@ -312,6 +312,10 @@ body {
   color: var(--primary-color);
 }
 
+.general-text {
+  color: var(--text-color);
+}
+
 .next-button {
   background-color: var(--primary-color);
   color: white;
