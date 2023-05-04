@@ -123,5 +123,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ___
 
-## Developper :
-<img src="https://img.shields.io/badge/SunL0w-Dind%20Thibault-blue" alt="Developper SunL0w"/>
+## Lead Developper :
+<a href="https://github.com/SunL0w/" alt="SunLow GitHub Link">
+<img src="https://img.shields.io/badge/SunL0w-Dind%20Thibault-blue"  alt="Developper SunL0w"/></a>
