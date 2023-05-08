@@ -4,6 +4,7 @@
 <p align="center">
 :new: Front-end MVP for the Saas - Under heavy development :hourglass_flowing_sand:
 </p>
+PLEASE CHECK THE MVP, THIS BRANCH IS NOT MAINTENED : https://github.com/SunL0w/brandly-frontend/tree/mvp
 
 ## Install dev environment :
 
