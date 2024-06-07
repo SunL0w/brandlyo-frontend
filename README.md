@@ -1,6 +1,6 @@
 ## Front-end for brandly Saas
 
-:new: Front-end for the Saas - Under heavy development :hourglass\_flowing\_sand:
+:new: Front-end for the Saas
 
 PLEASE CHECK THE MVP, THIS BRANCH IS NOT MAINTENED : [https://github.com/SunL0w/brandly-frontend/tree/mvp](https://github.com/SunL0w/brandly-frontend/tree/mvp)
 
