@@ -7,7 +7,7 @@
 
 ---
 
-PLEASE CHECK THE :arrow_right: [MVP] (https://github.com/SunL0w/brandly-frontend/tree/mvp) :arrow_left: BRANCH.
+PLEASE CHECK THE :arrow_right: [MVP](https://github.com/SunL0w/brandly-frontend/tree/mvp) :arrow_left: BRANCH.
 
 THIS BRANCH IS THE STABLE VERSION !
 
