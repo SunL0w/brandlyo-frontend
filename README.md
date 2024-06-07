@@ -7,11 +7,9 @@
 
 ---
 
-<p align="center">
 PLEASE CHECK THE :arrow_right: [MVP] (https://github.com/SunL0w/brandly-frontend/tree/mvp) :arrow_left: BRANCH.
 
 THIS BRANCH IS THE STABLE VERSION !
-</p>
 
 ## Install dev environment :
 
