@@ -2,7 +2,7 @@
 
 
 <p align="center">
-:new: Front-end MVP for the Saas - Under heavy development :hourglass_flowing_sand:
+:new: Front-end MVP for the Saas - Discontinued  project ❌📦
 </p>
 
 ---
